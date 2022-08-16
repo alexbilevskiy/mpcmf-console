@@ -32,19 +32,19 @@ class consoleBase
     {
         $commands = [];
 
-        MPCMF_DEBUG && self::log()->addDebug("Processing directory: {$directory}");
+        MPCMF_LL_DEBUG && self::log()->addDebug("Processing directory: {$directory}");
         $context = basename($directory, '.php');
         $possibleNamespace = "{$baseNamespace}\\{$context}";
         foreach(scandir($directory) as $commandFile) {
             $filePath = "{$directory}/{$commandFile}";
             if(strpos($commandFile, '.') === 0) {
-                MPCMF_DEBUG && self::log()->addDebug("Skipping file: {$commandFile}");
+                MPCMF_LL_DEBUG && self::log()->addDebug("Skipping file: {$commandFile}");
                 continue;
             } elseif(is_dir($filePath)) {
-                MPCMF_DEBUG && self::log()->addDebug("Directory found, recursive processing: {$commandFile}", ['Command search']);
+                MPCMF_LL_DEBUG && self::log()->addDebug("Directory found, recursive processing: {$commandFile}", ['Command search']);
                 $commands = array_merge($commands, $this->getCommandsFromDirectory($filePath, $possibleNamespace));
             } elseif(is_readable($filePath)) {
-                MPCMF_DEBUG && self::log()->addDebug("Command file found: {$commandFile}");
+                MPCMF_LL_DEBUG && self::log()->addDebug("Command file found: {$commandFile}");
                 $commandName = basename($commandFile, '.php');
                 $commandClass = "{$baseNamespace}\\{$context}\\{$commandName}";
                 $commands[] = new $commandClass();
