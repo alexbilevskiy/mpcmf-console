@@ -1,164 +1,105 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "929382ef09127a9e946a8c7f35f0de87",
     "packages": [
         {
-            "name": "evenement/evenement",
-            "version": "dev-master",
+            "name": "alcaeus/mongo-php-adapter",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/igorw/evenement.git",
-                "reference": "35e87541d4b53c22201519fce3caaa5b38ac8164"
+                "url": "https://github.com/alcaeus/mongo-php-adapter.git",
+                "reference": "0e99bf5ea15f8e9b7ddb3a6dc38c11aa95330ca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/igorw/evenement/zipball/35e87541d4b53c22201519fce3caaa5b38ac8164",
-                "reference": "35e87541d4b53c22201519fce3caaa5b38ac8164",
+                "url": "https://api.github.com/repos/alcaeus/mongo-php-adapter/zipball/0e99bf5ea15f8e9b7ddb3a6dc38c11aa95330ca1",
+                "reference": "0e99bf5ea15f8e9b7ddb3a6dc38c11aa95330ca1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-hash": "*",
+                "ext-mongodb": "^1.2.0",
+                "mongodb/mongodb": "^1.0.1",
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "provide": {
+                "ext-mongo": "1.6.14"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.2",
+                "symfony/phpunit-bridge": "^4.4.16 || ^5.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-version": "1.x"
+            },
+            "autoload": {
+                "files": [
+                    "lib/Mongo/functions.php"
+                ],
+                "psr-0": {
+                    "Mongo": "lib/Mongo"
+                },
+                "psr-4": {
+                    "Alcaeus\\MongoDbAdapter\\": "lib/Alcaeus/MongoDbAdapter"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "alcaeus",
+                    "email": "alcaeus@alcaeus.org"
+                },
+                {
+                    "name": "Olivier Lechevalier",
+                    "email": "olivier.lechevalier@gmail.com"
+                }
+            ],
+            "description": "Adapter to provide ext-mongo interface on top of mongo-php-library",
+            "keywords": [
+                "database",
+                "mongodb"
+            ],
+            "support": {
+                "issues": "https://github.com/alcaeus/mongo-php-adapter/issues",
+                "source": "https://github.com/alcaeus/mongo-php-adapter/tree/1.2.2"
+            },
+            "time": "2022-01-11T15:05:50+00:00"
+        },
+        {
+            "name": "bramus/ansi-php",
+            "version": "3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/ansi-php.git",
+                "reference": "f581b2fd322177e5fabd67af240811838c1c8fbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/ansi-php/zipball/f581b2fd322177e5fabd67af240811838c1c8fbc",
+                "reference": "f581b2fd322177e5fabd67af240811838c1c8fbc",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Evenement": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch",
-                    "homepage": "http://wiedler.ch/igor/"
-                }
-            ],
-            "description": "Événement is a very simple event dispatching library for PHP",
-            "keywords": [
-                "event-dispatcher",
-                "event-emitter"
-            ],
-            "time": "2014-07-09 21:08:03"
-        },
-        {
-            "name": "greevex/mpcmf-core",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/greevex/mpcmf-core.git",
-                "reference": "3ec3c2bb58b035b9ce3197dabc548f42f5f0b4f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/greevex/mpcmf-core/zipball/3ec3c2bb58b035b9ce3197dabc548f42f5f0b4f2",
-                "reference": "3ec3c2bb58b035b9ce3197dabc548f42f5f0b4f2",
-                "shasum": ""
-            },
-            "require": {
-                "infostars/net-curl": "dev-master",
-                "khr/react-curl": "dev-master",
-                "monolog/monolog": "~1.12",
-                "php": ">=5.5.10",
-                "phpdocumentor/reflection-docblock": "~2.0",
-                "phpmailer/phpmailer": "dev-master",
-                "react/http": "dev-master",
-                "slim/slim": "2.*",
-                "smarty/smarty": "3.1.27",
-                "symfony/console": "~2.6",
-                "symfony/filesystem": "~2.6",
-                "wingu/code-generator": "1.0.5"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0@dev"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "mpcmf\\system\\": "src/system/"
-                },
-                "files": [
-                    "src/loader.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gregory Ostrovsky",
-                    "email": "greevex@gmail.com",
-                    "homepage": "https://github.com/greevex"
-                },
-                {
-                    "name": "Dmitry Emelyanov",
-                    "email": "gilberg.vrn@gmail.com",
-                    "homepage": "https://github.com/gilberg-vrn"
-                }
-            ],
-            "description": "Build fast and powerful console and web applications. Part of mpcmf solution.",
-            "keywords": [
-                "Applications",
-                "cache",
-                "console",
-                "mongodb",
-                "mvc",
-                "rabbitmq",
-                "slim",
-                "smarty",
-                "threads"
-            ],
-            "time": "2015-11-20 14:32:10"
-        },
-        {
-            "name": "guzzlehttp/psr7",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
-                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
+                    "Bramus\\Ansi\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -166,19 +107,63 @@
             ],
             "authors": [
                 {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "name": "Bramus Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "https://www.bram.us/"
                 }
             ],
-            "description": "PSR-7 message implementation",
-            "keywords": [
-                "http",
-                "message",
-                "stream",
-                "uri"
+            "description": "ANSI Control Functions and ANSI Control Sequences (Colors, Erasing, etc.) for PHP CLI Apps",
+            "support": {
+                "issues": "https://github.com/bramus/ansi-php/issues",
+                "source": "https://github.com/bramus/ansi-php/tree/3.1"
+            },
+            "time": "2021-10-28T10:45:05+00:00"
+        },
+        {
+            "name": "bramus/monolog-colored-line-formatter",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bramus/monolog-colored-line-formatter.git",
+                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bramus/monolog-colored-line-formatter/zipball/6bff15eee00afe2690642535b0f1541f10852c2b",
+                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b",
+                "shasum": ""
+            },
+            "require": {
+                "bramus/ansi-php": "~3.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "~1.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bramus\\Monolog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
             ],
-            "time": "2015-11-03T01:34:55+00:00"
+            "authors": [
+                {
+                    "name": "Bramus Van Damme",
+                    "email": "bramus@bram.us",
+                    "homepage": "https://www.bram.us/"
+                }
+            ],
+            "description": "Colored Line Formatter for Monolog",
+            "support": {
+                "issues": "https://github.com/bramus/monolog-colored-line-formatter/issues",
+                "source": "https://github.com/bramus/monolog-colored-line-formatter/tree/master"
+            },
+            "time": "2015-01-07T22:12:35+00:00"
         },
         {
             "name": "infostars/net-curl",
@@ -218,7 +203,67 @@
                 }
             ],
             "description": "Simple curl wrapper",
-            "time": "2015-10-22 14:00:04"
+            "time": "2015-10-22T14:00:04+00:00"
+        },
+        {
+            "name": "jean85/pretty-package-versions",
+            "version": "2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jean85/pretty-package-versions.git",
+                "reference": "1064f44093e0b2ca67c8fcc4b685225ee059e847"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/1064f44093e0b2ca67c8fcc4b685225ee059e847",
+                "reference": "1064f44093e0b2ca67c8fcc4b685225ee059e847",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.0.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "jean85/composer-provided-replaced-stub-package": "^1.0",
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^7.5|^8.5|^9.4",
+                "vimeo/psalm": "^4.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jean85\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Lai",
+                    "email": "alessandro.lai85@gmail.com"
+                }
+            ],
+            "description": "A library to get pretty versions strings of installed dependencies",
+            "keywords": [
+                "composer",
+                "package",
+                "release",
+                "versions"
+            ],
+            "support": {
+                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
+                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.x"
+            },
+            "time": "2022-03-16T16:31:34+00:00"
         },
         {
             "name": "khr/php-mcurl-client",
@@ -306,7 +351,76 @@
                 "mysql",
                 "php"
             ],
-            "time": "2015-05-06 08:11:51"
+            "time": "2015-05-06T08:11:51+00:00"
+        },
+        {
+            "name": "mongodb/mongodb",
+            "version": "v1.11.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "3beb2c4a9fcf3c72c7c57c5614e42dc39bdaef9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/3beb2c4a9fcf3c72c7c57c5614e42dc39bdaef9b",
+                "reference": "3beb2c4a9fcf3c72c7c57c5614e42dc39bdaef9b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.12.0",
+                "jean85/pretty-package-versions": "^1.2 || ^2.0.1",
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-php80": "^1.19"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0",
+                "squizlabs/php_codesniffer": "^3.6",
+                "symfony/phpunit-bridge": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "support": {
+                "issues": "https://github.com/mongodb/mongo-php-library/issues",
+                "source": "https://github.com/mongodb/mongo-php-library/tree/v1.11"
+            },
+            "time": "2022-02-11T20:59:05+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -384,7 +498,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-11-18 18:03:10"
+            "time": "2015-11-18T18:03:10+00:00"
         },
         {
             "name": "mpcmf/mpcmf-core",
@@ -392,15 +506,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpcmf/mpcmf-core.git",
-                "reference": "a7f1cdb68590f11ddbbe88818852ea0a1f984b1b"
+                "reference": "9cc1eab8cec28586b1d048135b854ea9ec070bad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpcmf/mpcmf-core/zipball/a7f1cdb68590f11ddbbe88818852ea0a1f984b1b",
-                "reference": "a7f1cdb68590f11ddbbe88818852ea0a1f984b1b",
+                "url": "https://api.github.com/repos/mpcmf/mpcmf-core/zipball/9cc1eab8cec28586b1d048135b854ea9ec070bad",
+                "reference": "9cc1eab8cec28586b1d048135b854ea9ec070bad",
                 "shasum": ""
             },
             "require": {
+                "alcaeus/mongo-php-adapter": "^1.1@dev",
+                "bramus/monolog-colored-line-formatter": "2.x",
+                "ext-amqp": "*",
+                "ext-intl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-memcached": "*",
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "ext-sockets": "*",
+                "ext-zlib": "*",
                 "infostars/net-curl": "dev-master",
                 "khr/react-curl": "dev-master",
                 "monolog/monolog": "~1.12",
@@ -408,24 +533,24 @@
                 "nervetattoo/elasticsearch": "dev-master",
                 "php": ">=5.5.10",
                 "phpdocumentor/reflection-docblock": "~2.0",
-                "phpmailer/phpmailer": "dev-master",
+                "phpmailer/phpmailer": "~6.0",
                 "slim/slim": "2.*",
-                "smarty/smarty": "3.1.27",
+                "smarty/smarty": "~3.1",
                 "symfony/console": "~2.6",
-                "symfony/filesystem": "~2.6",
-                "wingu/code-generator": "1.0.5"
+                "symfony/filesystem": "~2.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.0@dev"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "mpcmf\\system\\": "src/system/"
-                },
                 "files": [
                     "src/loader.php"
-                ]
+                ],
+                "psr-4": {
+                    "mpcmf\\system\\": "src/system/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -456,7 +581,12 @@
                 "smarty",
                 "threads"
             ],
-            "time": "2018-03-23 11:47:06"
+            "support": {
+                "email": "greevex@gmail.com",
+                "issues": "https://github.com/greevex/mpcmf-core/issues?state=open",
+                "source": "https://github.com/greevex/mpcmf-core"
+            },
+            "time": "2022-08-16T15:39:00+00:00"
         },
         {
             "name": "mpcmf/mpcmf-signal-handler",
@@ -488,7 +618,7 @@
                     "email": "gilberg.vrn@gmail.com"
                 }
             ],
-            "time": "2018-03-23 11:19:18"
+            "time": "2018-03-23T11:19:18+00:00"
         },
         {
             "name": "nervetattoo/elasticsearch",
@@ -533,7 +663,7 @@
                 "client",
                 "elasticsearch"
             ],
-            "time": "2017-10-15 21:07:24"
+            "time": "2017-10-15T21:07:24+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -586,53 +716,60 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "dev-master",
+            "version": "v6.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "37d355070657a52acaced277de977cb498c31b63"
+                "reference": "9400f305a898f194caff5521f64e5dfa926626f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/37d355070657a52acaced277de977cb498c31b63",
-                "reference": "37d355070657a52acaced277de977cb498c31b63",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/9400f305a898f194caff5521f64e5dfa926626f3",
+                "reference": "9400f305a898f194caff5521f64e5dfa926626f3",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.0.0"
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "ext-hash": "*",
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpdocumentor/phpdocumentor": "*",
-                "phpunit/phpunit": "4.7.*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "doctrine/annotations": "^1.2",
+                "php-parallel-lint/php-console-highlighter": "^1.0.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3.2",
+                "phpcompatibility/php-compatibility": "^9.3.5",
+                "roave/security-advisories": "dev-latest",
+                "squizlabs/php_codesniffer": "^3.6.2",
+                "yoast/phpunit-polyfills": "^1.0.0"
             },
             "suggest": {
-                "league/oauth2-client": "Needed for XOAUTH2 authentication",
-                "league/oauth2-google": "Needed for Gmail XOAUTH2"
+                "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "class.phpmailer.php",
-                    "class.phpmaileroauth.php",
-                    "class.phpmaileroauthgoogle.php",
-                    "class.smtp.php",
-                    "class.pop3.php",
-                    "extras/EasyPeasyICS.php",
-                    "extras/ntlm_sasl_client.php"
-                ]
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "LGPL-2.1-only"
             ],
             "authors": [
                 {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
                     "name": "Marcus Bointon",
                     "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
                 },
                 {
                     "name": "Andy Prevost",
@@ -643,56 +780,17 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2015-11-09 07:21:34"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
+            "support": {
+                "issues": "https://github.com/PHPMailer/PHPMailer/issues",
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.6.3"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
+            "funding": [
                 {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "url": "https://github.com/Synchro",
+                    "type": "github"
                 }
             ],
-            "description": "Common interface for HTTP messages",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2015-05-04 20:22:00"
+            "time": "2022-06-20T09:21:02+00:00"
         },
         {
             "name": "psr/log",
@@ -738,7 +836,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-06-02 13:48:41"
+            "time": "2015-06-02T13:48:41+00:00"
         },
         {
             "name": "react/event-loop",
@@ -782,48 +880,6 @@
                 "event-loop"
             ],
             "time": "2014-02-26T17:36:58+00:00"
-        },
-        {
-            "name": "react/http",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/http.git",
-                "reference": "0c19a242264da820a6748e09657c730eadc45660"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http/zipball/0c19a242264da820a6748e09657c730eadc45660",
-                "reference": "0c19a242264da820a6748e09657c730eadc45660",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^2.0",
-                "guzzlehttp/psr7": "^1.0",
-                "php": ">=5.4.0",
-                "react/socket": "^0.4",
-                "react/stream": "^0.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Http\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Library for building an evented http server.",
-            "keywords": [
-                "http"
-            ],
-            "time": "2015-10-28 18:19:37"
         },
         {
             "name": "react/promise",
@@ -870,95 +926,6 @@
             "time": "2015-07-03T13:48:55+00:00"
         },
         {
-            "name": "react/socket",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/socket.git",
-                "reference": "9b3eba6e4983d27a81bce429d69145b4f632d53f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/9b3eba6e4983d27a81bce429d69145b4f632d53f",
-                "reference": "9b3eba6e4983d27a81bce429d69145b4f632d53f",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "~2.0",
-                "php": ">=5.4.0",
-                "react/event-loop": "0.4.*",
-                "react/stream": "0.4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Socket\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Library for building an evented socket server.",
-            "keywords": [
-                "Socket"
-            ],
-            "time": "2015-08-07 19:59:11"
-        },
-        {
-            "name": "react/stream",
-            "version": "v0.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/stream.git",
-                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/305b2328d2a2e157bc13b61a0f5c6e41b666b188",
-                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^2.0|^1.0",
-                "php": ">=5.3.8"
-            },
-            "require-dev": {
-                "react/event-loop": "^0.4|^0.3",
-                "react/promise": "^2.0|^1.0"
-            },
-            "suggest": {
-                "react/event-loop": "^0.4",
-                "react/promise": "^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Stream\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Basic readable and writable stream interfaces that support piping.",
-            "keywords": [
-                "pipe",
-                "stream"
-            ],
-            "time": "2015-10-07T18:32:58+00:00"
-        },
-        {
             "name": "slim/slim",
             "version": "2.x-dev",
             "source": {
@@ -1002,7 +969,7 @@
                 "rest",
                 "router"
             ],
-            "time": "2015-10-09 07:51:59"
+            "time": "2015-10-09T07:51:59+00:00"
         },
         {
             "name": "smarty/smarty",
@@ -1117,7 +1084,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 13:45:00"
+            "time": "2015-11-18T13:45:00+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1166,7 +1133,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-18 13:45:00"
+            "time": "2015-11-18T13:45:00+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1222,35 +1189,46 @@
                 "portable",
                 "shim"
             ],
-            "time": "2015-11-04 20:28:58"
+            "time": "2015-11-04T20:28:58+00:00"
         },
         {
-            "name": "wingu/code-generator",
-            "version": "1.0.5",
+            "name": "symfony/polyfill-php80",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Speicher210/CodeGenerator.git",
-                "reference": "3850e788946276208fb7175ee6d29e531320ae13"
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Speicher210/CodeGenerator/zipball/3850e788946276208fb7175ee6d29e531320ae13",
-                "reference": "3850e788946276208fb7175ee6d29e531320ae13",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/cfa0ae98841b9e461207c13ab093d76b0fa7bace",
+                "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
-                "wingu/reflection": "1.*"
+                "php": ">=7.1"
             },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
+            "default-branch": true,
             "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Wingu\\OctopusCore\\CodeGenerator\\": "src/",
-                    "Wingu\\OctopusCore\\CodeGenerator\\Tests": "tests/"
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.26-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1258,71 +1236,44 @@
             ],
             "authors": [
                 {
-                    "name": "Dragos Protung",
-                    "email": "dragos.protung@speicher210.com",
-                    "role": "Developer"
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
                 },
                 {
-                    "name": "Antoine Verger",
-                    "email": "antoine.verger@speicher210.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Wingu OctopusCore CoreGenerator",
-            "keywords": [
-                "code generator",
-                "generation",
-                "generator",
-                "php code generator"
-            ],
-            "time": "2014-06-18T09:14:42+00:00"
-        },
-        {
-            "name": "wingu/reflection",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Speicher210/Reflection.git",
-                "reference": "b5f3be85ac287455d83e8313b06471a210e1bfb9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Speicher210/Reflection/zipball/b5f3be85ac287455d83e8313b06471a210e1bfb9",
-                "reference": "b5f3be85ac287455d83e8313b06471a210e1bfb9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wingu\\OctopusCore\\Reflection\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
                 {
-                    "name": "Dragos Protung",
-                    "email": "dragos@protung.ro",
-                    "role": "Developer"
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Library on top of PHP Reflection with some extra helper methods and a more powerful PHP DocBlock and annotation tags reflection",
-            "homepage": "https://github.com/Speicher210/Reflection",
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
             "keywords": [
-                "annotations",
-                "php reflection",
-                "reflection"
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
             ],
-            "time": "2015-03-19T16:20:21+00:00"
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.26.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-10T07:21:04+00:00"
         },
         {
             "name": "wp-cli/php-cli-tools",
@@ -1384,5 +1335,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
