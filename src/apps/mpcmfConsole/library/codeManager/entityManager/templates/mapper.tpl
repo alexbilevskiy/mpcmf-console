@@ -12,6 +12,11 @@ use mpcmf\system\pattern\singleton;
 {if !empty($entityData['description'])}
  * {$entityData['description']|replace:"\n":"\n * "}
  *
+ * @method static self getInstance
+ * @method {$entityData['name']}Model getBy($criteria, $fields = [])
+ * @method {$entityData['name']}Model getById($id)
+ * @method {$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
+ * 
 {/if}
  *
  {include file="generator.tpl"}

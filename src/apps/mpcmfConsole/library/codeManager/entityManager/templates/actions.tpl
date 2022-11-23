@@ -22,6 +22,8 @@ use mpcmf\system\pattern\singleton;
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>
 {/foreach}
+ *
+ * @method {$entityData['name']}Mapper getMapper
  */
 class {$data['className']}
     extends actionsBase

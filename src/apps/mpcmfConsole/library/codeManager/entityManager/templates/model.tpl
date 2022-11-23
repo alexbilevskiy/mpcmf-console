@@ -12,6 +12,7 @@ use mpcmf\system\pattern\singleton;
 {if !empty($entityData['description'])}
  * {$entityData['description']|replace:"\n":"\n * "}
  *
+ * @method {$entityData['name']}Mapper getMapper
 {/if}
  *
  {include file="generator.tpl"}
