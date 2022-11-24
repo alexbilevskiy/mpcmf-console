@@ -25,7 +25,7 @@ use {$entityData['moduleNamespace']}\models\{$entityData['name']}Model;
  * @method static self getInstance
  * @method {$entityData['name']}Model getBy($criteria, $fields = [])
  * @method {$entityData['name']}Model getById($id)
- * @method []{$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
+ * @method {$entityData['name']}Model[] getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
  */
 class {$data['className']}
     extends mapperBase
