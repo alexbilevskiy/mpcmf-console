@@ -5,6 +5,7 @@ namespace {$entityData['moduleNamespace']}\entities;
 
 use mpcmf\modules\moduleBase\entities\entityBase;
 use mpcmf\system\pattern\singleton;
+use {$entityData['moduleNamespace']}\mappers\{$entityData['name']}Mapper;
 
 /**
  * Class {$data['className']}
@@ -15,10 +16,9 @@ use mpcmf\system\pattern\singleton;
  * @method {$entityData['name']}Mapper getMapper
 {/if}
  *
- {include file="generator.tpl"}
+{include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\entities
- * @date {"Y-m-d H:i:s"|date:$entityData['date']}
  *
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>

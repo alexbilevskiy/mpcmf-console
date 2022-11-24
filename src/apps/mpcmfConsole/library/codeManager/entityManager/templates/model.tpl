@@ -15,10 +15,9 @@ use mpcmf\system\pattern\singleton;
  * @method {$entityData['name']}Mapper getMapper
 {/if}
  *
- {include file="generator.tpl"}
+{include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\models
- * @date {"Y-m-d H:i:s"|date:$entityData['date']}
  *
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>

@@ -5,6 +5,7 @@ namespace {$entityData['moduleNamespace']}\mappers;
 
 use mpcmf\modules\moduleBase\mappers\mapperBase;
 use mpcmf\system\pattern\singleton;
+use {$entityData['moduleNamespace']}\models\{$entityData['name']}Model;
 
 /**
  * Class {$data['className']}
@@ -15,14 +16,13 @@ use mpcmf\system\pattern\singleton;
  * @method static self getInstance
  * @method {$entityData['name']}Model getBy($criteria, $fields = [])
  * @method {$entityData['name']}Model getById($id)
- * @method {$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
+ * @method []{$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
  * 
 {/if}
  *
- {include file="generator.tpl"}
+{include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\mappers
- * @date {"Y-m-d H:i:s"|date:$entityData['date']}
  *
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>

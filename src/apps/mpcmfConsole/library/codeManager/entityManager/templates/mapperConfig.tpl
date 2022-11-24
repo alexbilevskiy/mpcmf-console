@@ -5,7 +5,6 @@
 {include file="generator.tpl"}
  *
  * @package {$entityData['module']}\mapper\{$data['className']}
- * @date {"Y-m-d H:i:s"|date:$entityData['date']}
  *
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>
