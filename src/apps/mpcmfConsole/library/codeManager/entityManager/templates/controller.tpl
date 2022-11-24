@@ -13,9 +13,7 @@ use {$entityData['moduleNamespace']}\mappers\{$entityData['name']}Mapper;
 {if !empty($entityData['description'])}
  * {$entityData['description']|replace:"\n":"\n * "}
  *
- * @method {$entityData['name']}Mapper getMapper
 {/if}
- *
 {include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\controllers;
@@ -23,6 +21,8 @@ use {$entityData['moduleNamespace']}\mappers\{$entityData['name']}Mapper;
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>
 {/foreach}
+ *
+ * @method {$entityData['name']}Mapper getMapper
  */
 class {$data['className']}
     extends controllerBase

@@ -14,7 +14,6 @@ use {$entityData['moduleNamespace']}\mappers\{$entityData['name']}Mapper;
  * {$entityData['description']|replace:"\n":"\n * "}
  *
 {/if}
- *
 {include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\actions;

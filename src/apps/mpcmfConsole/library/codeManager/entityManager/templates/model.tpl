@@ -12,9 +12,7 @@ use mpcmf\system\pattern\singleton;
 {if !empty($entityData['description'])}
  * {$entityData['description']|replace:"\n":"\n * "}
  *
- * @method {$entityData['name']}Mapper getMapper
 {/if}
- *
 {include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\models
@@ -23,6 +21,7 @@ use mpcmf\system\pattern\singleton;
  * @author {$author['name']} <{$author['email']}>
 {/foreach}
  *
+ * @method {$entityData['name']}Mapper getMapper
 {foreach from=$entityData['struct']['mapper']['map'] key="fieldName" item="fieldData"}
  * @method {$fieldData['type']} get{$fieldData['mixedCase']|ucfirst}() {if empty($fieldData['description'])}{$fieldData['name']}{else}{$fieldData['description']}{/if}
 

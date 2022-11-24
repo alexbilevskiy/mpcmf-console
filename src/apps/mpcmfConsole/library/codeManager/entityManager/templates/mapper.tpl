@@ -13,13 +13,7 @@ use {$entityData['moduleNamespace']}\models\{$entityData['name']}Model;
 {if !empty($entityData['description'])}
  * {$entityData['description']|replace:"\n":"\n * "}
  *
- * @method static self getInstance
- * @method {$entityData['name']}Model getBy($criteria, $fields = [])
- * @method {$entityData['name']}Model getById($id)
- * @method []{$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
- * 
 {/if}
- *
 {include file="generator.tpl"}
  *
  * @package {$entityData['moduleNamespace']}\mappers
@@ -27,6 +21,11 @@ use {$entityData['moduleNamespace']}\models\{$entityData['name']}Model;
 {foreach from=$entityData['authors'] item='author'}
  * @author {$author['name']} <{$author['email']}>
 {/foreach}
+ *
+ * @method static self getInstance
+ * @method {$entityData['name']}Model getBy($criteria, $fields = [])
+ * @method {$entityData['name']}Model getById($id)
+ * @method []{$entityData['name']}Model getAllBy($criteria = [], array $fields = [], array $sort = null) note: returns cursor, nor array
  */
 class {$data['className']}
     extends mapperBase
