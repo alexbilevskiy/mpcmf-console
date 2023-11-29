@@ -58,7 +58,9 @@ abstract class consoleCommandBase
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        return $this->handle($input, $output);
+        $code = $this->handle($input, $output);
+
+        return $code ?? 0;
     }
 
     protected function configure()
