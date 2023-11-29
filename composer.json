@@ -1,4 +1,7 @@
 {
+    "repositories": [
+        { "type": "vcs", "url": "git@github.com:alexbilevskiy/mpcmf-core.git" }
+    ],
     "name": "mpcmf/mpcmf-console",
     "minimum-stability": "dev",
     "license": "MIT",
@@ -13,7 +16,7 @@
         }
     ],
     "require": {
-        "mpcmf/mpcmf-core": "dev-master",
+        "mpcmf/mpcmf-core": "dev-feature/php82 as dev-master",
         "wp-cli/php-cli-tools": "^0.10.4"
     },
     "autoload": {

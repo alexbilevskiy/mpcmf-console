@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "929382ef09127a9e946a8c7f35f0de87",
+    "content-hash": "d6686aad5f613ac7be4ee4fd2abdaf17",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -121,25 +121,25 @@
         },
         {
             "name": "bramus/monolog-colored-line-formatter",
-            "version": "2.0.3",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bramus/monolog-colored-line-formatter.git",
-                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b"
+                "reference": "708891d34cb431d9ed56da91a53ecc2d8afdc24e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bramus/monolog-colored-line-formatter/zipball/6bff15eee00afe2690642535b0f1541f10852c2b",
-                "reference": "6bff15eee00afe2690642535b0f1541f10852c2b",
+                "url": "https://api.github.com/repos/bramus/monolog-colored-line-formatter/zipball/708891d34cb431d9ed56da91a53ecc2d8afdc24e",
+                "reference": "708891d34cb431d9ed56da91a53ecc2d8afdc24e",
                 "shasum": ""
             },
             "require": {
-                "bramus/ansi-php": "~3.0",
-                "php": ">=5.4.0"
+                "bramus/ansi-php": "^3.0.3",
+                "php": "^7.2|^8.0"
             },
             "require-dev": {
-                "monolog/monolog": "~1.0",
-                "phpunit/phpunit": "~4.0"
+                "monolog/monolog": "~2.0",
+                "phpunit/phpunit": "~7.0|^9.4"
             },
             "type": "library",
             "autoload": {
@@ -161,9 +161,9 @@
             "description": "Colored Line Formatter for Monolog",
             "support": {
                 "issues": "https://github.com/bramus/monolog-colored-line-formatter/issues",
-                "source": "https://github.com/bramus/monolog-colored-line-formatter/tree/master"
+                "source": "https://github.com/bramus/monolog-colored-line-formatter/tree/3.0.6"
             },
-            "time": "2015-01-07T22:12:35+00:00"
+            "time": "2021-12-05T09:10:49+00:00"
         },
         {
             "name": "infostars/net-curl",
@@ -424,55 +424,65 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "dev-master",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "7d20351afc85aa23c5795309c9984a1e93d81c27"
+                "reference": "437cb3628f4cf6042cc10ae97fc2b8472e48ca1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/7d20351afc85aa23c5795309c9984a1e93d81c27",
-                "reference": "7d20351afc85aa23c5795309c9984a1e93d81c27",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
+                "reference": "437cb3628f4cf6042cc10ae97fc2b8472e48ca1f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
+                "php": ">=7.2",
+                "psr/log": "^1.0.1 || ^2.0 || ^3.0"
             },
             "provide": {
-                "psr/log-implementation": "1.0.0"
+                "psr/log-implementation": "1.0.0 || 2.0.0 || 3.0.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9",
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
-                "php-console/php-console": "^3.1.3",
-                "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
-                "raven/raven": "^0.13",
-                "ruflin/elastica": ">=0.90 <3.0",
-                "swiftmailer/swiftmailer": "~5.3",
-                "videlalvaro/php-amqplib": "~2.4"
+                "elasticsearch/elasticsearch": "^7 || ^8",
+                "ext-json": "*",
+                "graylog2/gelf-php": "^1.4.2 || ^2@dev",
+                "guzzlehttp/guzzle": "^7.4",
+                "guzzlehttp/psr7": "^2.2",
+                "mongodb/mongodb": "^1.8",
+                "php-amqplib/php-amqplib": "~2.4 || ^3",
+                "phpspec/prophecy": "^1.15",
+                "phpstan/phpstan": "^0.12.91",
+                "phpunit/phpunit": "^8.5.14",
+                "predis/predis": "^1.1 || ^2.0",
+                "rollbar/rollbar": "^1.3 || ^2 || ^3",
+                "ruflin/elastica": "^7",
+                "swiftmailer/swiftmailer": "^5.3|^6.0",
+                "symfony/mailer": "^5.4 || ^6",
+                "symfony/mime": "^5.4 || ^6"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "ext-curl": "Required to send log messages using the IFTTTHandler, the LogglyHandler, the SendGridHandler, the SlackWebhookHandler or the TelegramBotHandler",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
+                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
+                "ext-openssl": "Required to send log messages using SSL",
+                "ext-sockets": "Allow sending log messages to a Syslog server (via UDP driver)",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
-                "raven/raven": "Allow sending log messages to a Sentry server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18.x-dev"
+                    "dev-main": "2.x-dev"
                 }
             },
             "autoload": {
@@ -488,35 +498,49 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
+                    "homepage": "https://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
+            "homepage": "https://github.com/Seldaek/monolog",
             "keywords": [
                 "log",
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-11-18T18:03:10+00:00"
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/2.x"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-10-27T15:25:26+00:00"
         },
         {
             "name": "mpcmf/mpcmf-core",
-            "version": "dev-master",
+            "version": "dev-feature/php82",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mpcmf/mpcmf-core.git",
-                "reference": "89c2cfebbec456c6c1251186426e68f3ada2f35f"
+                "url": "https://github.com/alexbilevskiy/mpcmf-core.git",
+                "reference": "b75d4e2f7a6a3d4d0f0c9f2aedc0afacb90e9c48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpcmf/mpcmf-core/zipball/89c2cfebbec456c6c1251186426e68f3ada2f35f",
-                "reference": "89c2cfebbec456c6c1251186426e68f3ada2f35f",
+                "url": "https://api.github.com/repos/alexbilevskiy/mpcmf-core/zipball/b75d4e2f7a6a3d4d0f0c9f2aedc0afacb90e9c48",
+                "reference": "b75d4e2f7a6a3d4d0f0c9f2aedc0afacb90e9c48",
                 "shasum": ""
             },
             "require": {
                 "alcaeus/mongo-php-adapter": "^1.1@dev",
-                "bramus/monolog-colored-line-formatter": "2.x",
+                "bramus/monolog-colored-line-formatter": "3.x",
                 "ext-amqp": "*",
                 "ext-intl": "*",
                 "ext-json": "*",
@@ -528,32 +552,29 @@
                 "ext-zlib": "*",
                 "infostars/net-curl": "dev-master",
                 "khr/react-curl": "dev-master",
-                "monolog/monolog": "~1.12",
+                "monolog/monolog": "^2.9",
                 "mpcmf/mpcmf-signal-handler": "dev-master",
                 "nervetattoo/elasticsearch": "dev-master",
                 "php": ">=7.2",
                 "phpdocumentor/reflection-docblock": "~2.0",
                 "phpmailer/phpmailer": "~6.0",
-                "phpseclib/mcrypt_compat": "^1.0",
+                "phpseclib/mcrypt_compat": "^2.0",
                 "slim/slim": "2.x-dev#0e6d3573c4c525be80ffc4a3e66b7189d4af1e3a",
                 "smarty/smarty": "3.1.44",
-                "symfony/console": "~2.6",
                 "symfony/filesystem": "~2.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.0@dev"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/loader.php"
-                ],
                 "psr-4": {
                     "mpcmf\\system\\": "src/system/"
-                }
+                },
+                "files": [
+                    "src/loader.php"
+                ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -571,7 +592,7 @@
             ],
             "description": "Build fast and powerful console and web applications. Part of mpcmf solution.",
             "keywords": [
-                "Applications",
+                "applications",
                 "cache",
                 "console",
                 "mongodb",
@@ -583,11 +604,11 @@
                 "threads"
             ],
             "support": {
-                "email": "greevex@gmail.com",
                 "issues": "https://github.com/greevex/mpcmf-core/issues?state=open",
-                "source": "https://github.com/greevex/mpcmf-core"
+                "source": "https://github.com/greevex/mpcmf-core",
+                "email": "greevex@gmail.com"
             },
-            "time": "2023-01-31T13:35:31+00:00"
+            "time": "2023-11-29T18:38:17+00:00"
         },
         {
             "name": "mpcmf/mpcmf-signal-handler",
@@ -665,6 +686,123 @@
                 "elasticsearch"
             ],
             "time": "2017-10-15T21:07:24+00:00"
+        },
+        {
+            "name": "paragonie/constant_time_encoding",
+            "version": "v2.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/constant_time_encoding.git",
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/58c3f47f650c94ec05a151692652a868995d2938",
+                "reference": "58c3f47f650c94ec05a151692652a868995d2938",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7|^8"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6|^7|^8|^9",
+                "vimeo/psalm": "^1|^2|^3|^4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ParagonIE\\ConstantTime\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Steve 'Sc00bz' Thomas",
+                    "email": "steve@tobtu.com",
+                    "homepage": "https://www.tobtu.com",
+                    "role": "Original Developer"
+                }
+            ],
+            "description": "Constant-time Implementations of RFC 4648 Encoding (Base-64, Base-32, Base-16)",
+            "keywords": [
+                "base16",
+                "base32",
+                "base32_decode",
+                "base32_encode",
+                "base64",
+                "base64_decode",
+                "base64_encode",
+                "bin2hex",
+                "encoding",
+                "hex",
+                "hex2bin",
+                "rfc4648"
+            ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/constant_time_encoding/issues",
+                "source": "https://github.com/paragonie/constant_time_encoding"
+            },
+            "time": "2022-06-14T06:56:20+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v9.99.100",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -795,27 +933,27 @@
         },
         {
             "name": "phpseclib/mcrypt_compat",
-            "version": "1.0.x-dev",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/mcrypt_compat.git",
-                "reference": "077eccc6970b723c00a30d95c70d67f892df0de7"
+                "reference": "6505669343743daf290b7d7b6b7105f85fd9988f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/mcrypt_compat/zipball/077eccc6970b723c00a30d95c70d67f892df0de7",
-                "reference": "077eccc6970b723c00a30d95c70d67f892df0de7",
+                "url": "https://api.github.com/repos/phpseclib/mcrypt_compat/zipball/6505669343743daf290b7d7b6b7105f85fd9988f",
+                "reference": "6505669343743daf290b7d7b6b7105f85fd9988f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
-                "phpseclib/phpseclib": ">=2.0.36 <3.0.0"
+                "php": ">=5.6.1",
+                "phpseclib/phpseclib": ">=3.0.13 <4.0.0"
             },
             "provide": {
                 "ext-mcrypt": "5.6.40"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4"
+                "phpunit/phpunit": "^5.7|^6.0|^9.4"
             },
             "suggest": {
                 "ext-openssl": "Will enable faster cryptographic operations"
@@ -837,11 +975,12 @@
                     "homepage": "http://phpseclib.sourceforge.net"
                 }
             ],
-            "description": "PHP 7.1 polyfill for the mcrypt extension from PHP <= 7.0",
+            "description": "PHP 5.x-8.x polyfill for mcrypt extension",
             "keywords": [
                 "cryptograpy",
                 "encryption",
-                "mcrypt"
+                "mcrypt",
+                "polyfill"
             ],
             "support": {
                 "email": "terrafrost@php.net",
@@ -858,36 +997,36 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-18T12:17:52+00:00"
+            "time": "2022-12-19T00:32:45+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.x-dev",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "49e6bf3762cd775fda9171d9884a53b0d41666c1"
+                "reference": "56c79f16a6ae17e42089c06a2144467acc35348a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/49e6bf3762cd775fda9171d9884a53b0d41666c1",
-                "reference": "49e6bf3762cd775fda9171d9884a53b0d41666c1",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/56c79f16a6ae17e42089c06a2144467acc35348a",
+                "reference": "56c79f16a6ae17e42089c06a2144467acc35348a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "paragonie/constant_time_encoding": "^1|^2",
+                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
+                "php": ">=5.6.1"
             },
             "require-dev": {
-                "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "*"
             },
             "suggest": {
+                "ext-dom": "Install the DOM extension to load XML formatted public keys.",
                 "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
                 "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
-                "ext-xml": "Install the XML extension to load XML formatted public keys."
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
             },
             "type": "library",
             "autoload": {
@@ -895,7 +1034,7 @@
                     "phpseclib/bootstrap.php"
                 ],
                 "psr-4": {
-                    "phpseclib\\": "phpseclib/"
+                    "phpseclib3\\": "phpseclib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -952,7 +1091,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/2.0"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0"
             },
             "funding": [
                 {
@@ -968,7 +1107,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-17T13:56:03+00:00"
+            "time": "2023-11-27T11:13:31+00:00"
         },
         {
             "name": "psr/log",
@@ -1213,66 +1352,6 @@
             "time": "2022-01-17T23:12:04+00:00"
         },
         {
-            "name": "symfony/console",
-            "version": "2.8.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "ee86b4579c9e8ad3859cd33f3ef1572f85eda537"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/ee86b4579c9e8ad3859cd33f3ef1572f85eda537",
-                "reference": "ee86b4579c9e8ad3859cd33f3ef1572f85eda537",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1|~3.0.0",
-                "symfony/process": "~2.1|~3.0.0"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-11-18T13:45:00+00:00"
-        },
-        {
             "name": "symfony/filesystem",
             "version": "2.8.x-dev",
             "source": {
@@ -1320,62 +1399,6 @@
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
             "time": "2015-11-18T13:45:00+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "0b6a8940385311a24e060ec1fe35680e17c74497"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0b6a8940385311a24e060ec1fe35680e17c74497",
-                "reference": "0b6a8940385311a24e060ec1fe35680e17c74497",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2015-11-04T20:28:58+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1513,7 +1536,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mpcmf/mpcmf-core",
+            "version": "dev-feature/php82",
+            "alias": "dev-master",
+            "alias_normalized": "dev-master"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "mpcmf/mpcmf-core": 20
