@@ -17,7 +17,8 @@
     ],
     "require": {
         "mpcmf/mpcmf-core": "dev-feature/php82 as dev-master",
-        "wp-cli/php-cli-tools": "^0.10.4"
+        "wp-cli/php-cli-tools": "^0.10.4",
+        "symfony/console": "~5.4"
     },
     "autoload": {
         "psr-4": {
